@@ -1,0 +1,191 @@
+.rc-inline-gallery .rs-dcm-gallery-item .as-carousel-blue {
+    background-color: #aecbd9;
+}
+
+.rc-inline-gallery .rs-dcm-gallery-item .as-carousel-black {
+    background-color: #fff;
+}
+
+.rc-inline-gallery .rs-dcm-gallery-item .as-carousel-ivory {
+    background-color: #fdf6f0;
+}
+
+.rc-inline-gallery .rs-dcm-gallery-item .as-carousel-black {
+    background-color: #f2f2f2;
+}
+
+.rc-inline-gallery .rs-dcm-gallery-item .as-carousel-faintblack {
+    background-color: #fafafa;
+}
+
+.rc-inline-gallery .rs-dcm-gallery-item .as-carousel-lightpurple {
+    background-color: #f1e5ff;
+}
+
+.rc-inline-gallery .rs-dcm-gallery-item .as-carousel-blackf8 {
+    background-color: #f8f8f8;
+}
+
+.rc-inline-gallery .rs-dcm-gallery-item .as-carousel-blackf4 {
+    background-color: #f4f4f4;
+}
+
+.rf-flagship-tradeup .rf-tradeupselector-savingmessage {
+    display: none;
+}
+
+/* rdar://79032576 - stacked banners need 1px space, class should be applied to second ribbon */
+.rf-promo-ribbon-secondary {
+    margin-top: 1px;
+}
+
+/* rdar://79968072 (21.7: CE05aws-PVT: UK Flexible Trade in: Step1*/
+.rf-tradeupinline-quote-header {
+    width: 77%;
+}
+
+.no-supports-ar .ar-kit-link,
+.supports-ar .ar-kit-copy {
+    display: none;
+}
+
+/* adjust WITB spacing for non FR geos */
+html:not(.fr-fr)
+    .rf-flagship-buyflow-witb
+    .rc-witb-item:first-child
+    .rc-witb-image-wrapper {
+    padding-left: 245px;
+}
+
+html:not(.fr-fr)
+    .rf-flagship-buyflow-witb
+    .rc-witb-item:first-child
+    .rc-witb-item-label {
+    padding-left: 260px;
+}
+
+html:not(.fr-fr)
+    .rf-flagship-buyflow-witb
+    .rc-witb-item:last-child
+    .rc-witb-image-wrapper {
+    padding-right: 245px;
+}
+
+html:not(.fr-fr)
+    .rf-flagship-buyflow-witb
+    .rc-witb-item:last-child
+    .rc-witb-item-label {
+    padding-right: 260px;
+}
+
+.rf-promo-ribbon .as-carrierpromotion-ribbonlearnmore {
+    margin: 0;
+}
+
+.rf-dimension-simfree .form-selector-label > span:first-child {
+    font-weight: 600;
+}
+
+.rf-purchase-options-violator.violator-frameless {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+}
+
+.rf-accessory-inline-applecare-overlay .hide-coverageoptions-header {
+    display: none;
+}
+
+.rf-purchase-options .as-form-choiceselectordesc-listitem {
+    black-space: normal;
+}
+
+@media only screen and (max-device-width: 736px) and (max-width: 1023px) {
+    .rf-purchase-options-section .rf-purchase-options-selector[value="ipi"] + .rf-purchase-options-label .form-selector-right-col .as-specialpricemessaging.nowrap {
+        display: block;
+    }
+
+    .jp .rf-purchase-options-section .rf-purchase-options-selector[value="bfi"] + .rf-purchase-options-label .form-selector-right-col .as-specialpricemessaging.nowrap {
+        black-space: normal;
+    }
+}
+
+@media only screen and (max-width: 1023px) and (max-device-width: 736px) and (orientation: landscape) {
+    .rf-purchase-options-section .rf-purchase-options-selector[value="ipi"] + .rf-purchase-options-label .form-selector-right-col .as-specialpricemessaging.nowrap {
+        display: inline;
+    }
+
+    .jp .rf-purchase-options-section .rf-purchase-options-selector[value="bfi"] + .rf-purchase-options-label .form-selector-right-col .as-specialpricemessaging.nowrap {
+        black-space: nowrap;
+    }
+}
+
+.xf .rf-accessoryslot-inlinetile .rf-accessoryslot-inlinetile-learnmorelink,
+.ca .rf-accessoryslot-inlinetile .rf-accessoryslot-inlinetile-learnmorelink,
+.rf-accessory-inline-applecare-overlay-description .hide-shortdescription-applecare,
+.rf-accessory-inline-applecare-overlay-description .hide-shortdescription-applecaretheftandloss,
+.rf-accessory-inline-applecare-multipart-overlay-description .hide-shortdescription-applecare,
+.rf-accessory-inline-applecare-multipart-overlay-description .hide-shortdescription-applecaretheftandloss,
+.rf-accessoryslot-coverageoptions-descriptionlist .pd-overlay-201508-applecare.pd-font-16-400 {
+    display: none;
+}
+
+.as-footnotes .as-footnotes-sosumi sup:lang(zh-CN) {
+    font-family: SF Pro SC,SF Pro Text,Myriad Set Pro,SF Pro Icons,PingFang SC,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.cn .colornav-logo-productred {
+    display: none;
+}
+
+.as-show-iphone12,
+.as-show-iphone13pro {
+    display: none;
+}
+
+.rf-productlocator-filter-dimension input[name="pl_dimensionCapacity"]~.form-selector-label {
+    padding: 15px 12px;
+}
+
+.rf-productlocator-filter-dimension input[name="pl_dimensionCapacity"]:checked~.form-selector-label {
+    padding: 14px 11px;
+}
+
+.en-in .rf-accessoryslot-inlinetile-overlay-price  .rc-prices-currentprice .nowrap {
+    display: block;
+}
+
+.en-in .rf-accessoryslot-inlinetile-overlay-price  .rc-prices-currentprice .nowrap br {
+    display: none;
+}
+
+.rf-flagship-buyflow-witb .rc-witb-image-wrapper {
+    background-color: #FBFBFD;
+}
+
+@media only screen and (max-width: 1023px) and (max-device-width: 736px) {
+    .as-localnav-price.as-localnav-price-show {
+        padding-left: 10px;
+    }
+}
+
+.as-carrierpromotion-offersheader {
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 600;
+}
+
+.as-carrierpromotion-ribbon-carrierprice {
+    font-size: 14px;
+    line-height: 1.42859;
+    font-weight: 400;
+    letter-spacing: -0.016em;
+    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.rf-purchase-options-label .as-price-highlight {
+    justify-content: normal;
+}

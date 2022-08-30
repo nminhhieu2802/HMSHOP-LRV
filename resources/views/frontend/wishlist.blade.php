@@ -1,0 +1,100 @@
+@extends('layouts.front')
+
+@section('title')
+My Cart
+@endsection
+
+@section('content')
+
+<div class="py-3 mb-4 shadow-sm bg-dark text-light border-top">
+    <div class="container">
+        <h6 class="mb-0">
+            <a href="{{ url('/') }}" class="text-light">
+                Home
+            </a> /
+            <a href="{{ url('wishlist') }}" class="text-light">
+                Wishlist
+            </a>
+        </h6>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card shadow wishlist">
+        <div class="card-header bg-dark">
+            <h4 class="text-light">Wishlist</h4>
+        </div>
+       <div class="card-body">
+        @if ($wishlist->count() >0)
+            <div class="card-body">
+                        <div class="row product_data">
+                            <div class="col-md-2">
+                                <h6 class="fw-bold">Image</h6>
+                            </div>
+                            <div class="col-md-2">
+                                <h6 class="fw-bold">Product Name</h6>
+                            </div>
+                            <div class="col-md-2">
+                                <h6 class="fw-bold">Price</h6>
+                            </div>
+                            <div class="col-md-2">
+                                <h6 class="fw-bold">Quantity</h6>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <h6 class="fw-bold">Action</h6>
+                            </div>
+                        </div>
+                        <hr>
+                        @foreach ($wishlist as $item)
+                            <div class="row product_data">
+                            <div class="col-md-2">
+                                <img src="{{ asset('assets/uploads/products/'.$item->products->image) }}" height="100px" width="100px" alt="Image Here">
+                            </div>
+                            <div class="col-md-2 my-auto">
+                                <h6 class="fw-light">{{ $item->products->name }}</h6>
+                            </div>
+                            <div class="col-md-2 my-auto">
+                                <h6 class="fw-light">{{ number_format($item->products->selling_price) }} VNĐ</h6>
+                            </div>
+                            <div class="col-md-2 my-auto">
+                                <input type="hidden" class="prod_id" value="{{ $item->prod_id }}">
+                                @if( $item->products->qty >= $item->prod_qty)
+                                   <div class="input-group text-center mb-3" style="width:130px">
+                                        <button class="input-group-text rounded-pill btn btn-dark decrement-btn">-</button>
+                                        <input type="text" name="quantity" class="form-control qty-input rounded-pill text-center" value="1">
+                                        <button class="input-group-text rounded-pill btn btn-dark increment-btn">+</button>
+                                    </div>
+                                @else
+                                    <h6>Out of Stock</h6>
+                                @endif
+                            </div>
+                            <div class="col-md-4 my-auto d-flex justify-content-center">
+                                <button class="btn btn-dark addToCartBtn rounded-pill ">Add to Cart <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                                <button class="btn btn-danger delete-wishlist-item rounded-pill">Remove <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>  
+                        @endforeach
+                    </div>
+                    @else
+                        <div class="container">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <h4>No products in your Wishlist</h4>
+                                        <hr>
+                                        <a href="{{ url('/') }}" class="btn btn-dark rounded-pill text-light">Continue Shopping</a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="{{ asset('assets/images/bg1.png') }}" height="400px" width="550px" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                </div>
+                </div>
+            </div>
+
+@endsection
